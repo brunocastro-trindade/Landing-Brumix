@@ -219,7 +219,7 @@ function Frame2() {
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="bg-white/95 backdrop-blur-sm relative shrink-0 sticky top-0 w-full z-50 shadow-[0_1px_0_rgba(18,22,26,0.08)]" data-name="Header">
+    <header className="bg-white relative shrink-0 sticky top-0 w-full z-50 shadow-[0_1px_0_rgba(18,22,26,0.08)]" data-name="Header">
       <div className="flex gap-4 items-center justify-between max-w-[1440px] mx-auto px-5 md:px-10 lg:px-[100px] py-3 md:py-[18px] relative w-full">
         <Frame />
         <div className="hidden lg:block">
@@ -544,8 +544,8 @@ function Frame19() {
 
 function Frame18() {
   return (
-    <div className="group bg-[#f6f7f8] min-h-[190px] sm:h-[210px] relative rounded-[16px] shrink-0 w-full max-w-[300px] sm:w-[260px] transition-all duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_44px_rgba(18,22,26,0.12)]" data-name="Frame">
-      <div className="content-stretch flex flex-col gap-[20px] items-center overflow-clip px-[28px] py-[36px] relative rounded-[inherit] size-full">
+    <div className="group bg-[#f6f7f8] h-full relative rounded-[16px] shrink-0 w-full max-w-[300px] sm:w-[260px] transition-all duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_44px_rgba(18,22,26,0.12)]" data-name="Frame">
+      <div className="content-stretch flex flex-col gap-[20px] items-center justify-center overflow-clip px-[28px] py-[36px] relative rounded-[inherit] size-full">
         <Frame19 />
         <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[#12161a] text-[17px] text-center max-w-[204px]">Canteiro de obras</p>
       </div>
@@ -580,8 +580,8 @@ function Frame21() {
 
 function Frame20() {
   return (
-    <div className="group bg-[#f6f7f8] min-h-[190px] sm:h-[210px] relative rounded-[16px] shrink-0 w-full max-w-[300px] sm:w-[260px] transition-all duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_44px_rgba(18,22,26,0.12)]" data-name="Frame">
-      <div className="content-stretch flex flex-col gap-[20px] items-center overflow-clip px-[28px] py-[36px] relative rounded-[inherit] size-full">
+    <div className="group bg-[#f6f7f8] h-full relative rounded-[16px] shrink-0 w-full max-w-[300px] sm:w-[260px] transition-all duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_44px_rgba(18,22,26,0.12)]" data-name="Frame">
+      <div className="content-stretch flex flex-col gap-[20px] items-center justify-center overflow-clip px-[28px] py-[36px] relative rounded-[inherit] size-full">
         <Frame21 />
         <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[#12161a] text-[17px] text-center max-w-[204px]">Projetos especiais</p>
       </div>
@@ -646,8 +646,8 @@ function Frame23() {
 
 function Frame22() {
   return (
-    <div className="group bg-[#f6f7f8] relative rounded-[16px] shrink-0 w-full max-w-[300px] sm:w-[260px] transition-all duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_44px_rgba(18,22,26,0.12)]" data-name="Frame">
-      <div className="content-stretch flex flex-col gap-[20px] items-center overflow-clip px-[28px] py-[36px] relative rounded-[inherit] size-full">
+    <div className="group bg-[#f6f7f8] h-full relative rounded-[16px] shrink-0 w-full max-w-[300px] sm:w-[260px] transition-all duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_44px_rgba(18,22,26,0.12)]" data-name="Frame">
+      <div className="content-stretch flex flex-col gap-[20px] items-center justify-center overflow-clip px-[28px] py-[36px] relative rounded-[inherit] size-full">
         <Frame23 />
         <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[#12161a] text-[17px] text-center max-w-[204px]">Suporte técnico direto na obra</p>
       </div>
@@ -727,8 +727,8 @@ function Frame25() {
 
 function Frame24() {
   return (
-    <div className="group bg-[#f6f7f8] min-h-[190px] sm:h-[210px] relative rounded-[16px] shrink-0 w-full max-w-[300px] sm:w-[260px] transition-all duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_44px_rgba(18,22,26,0.12)]" data-name="Frame">
-      <div className="content-stretch flex flex-col gap-[20px] items-center overflow-clip px-[28px] py-[36px] relative rounded-[inherit] size-full">
+    <div className="group bg-[#f6f7f8] h-full relative rounded-[16px] shrink-0 w-full max-w-[300px] sm:w-[260px] transition-all duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_44px_rgba(18,22,26,0.12)]" data-name="Frame">
+      <div className="content-stretch flex flex-col gap-[20px] items-center justify-center overflow-clip px-[28px] py-[36px] relative rounded-[inherit] size-full">
         <Frame25 />
         <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[#12161a] text-[17px] text-center max-w-[204px]">Bombeamento e espalhamento sob medida</p>
       </div>
@@ -739,7 +739,7 @@ function Frame24() {
 
 function Frame17() {
   return (
-    <div className="flex flex-wrap gap-[24px] items-stretch justify-center max-w-[1092px] relative shrink-0" data-name="Frame">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px] items-stretch justify-items-center max-w-[1120px] w-full relative shrink-0" data-name="Frame">
       <Frame18 />
       <Frame20 />
       <Frame22 />
@@ -913,7 +913,7 @@ function GoogleStars() {
 function GoogleReview({ initial, name, text }: { initial: string; name: string; text: string }) {
   return (
     <div
-      className="bg-white flex flex-col gap-[12px] p-[24px] relative rounded-[8px] shadow-[0_1px_2px_0_rgba(60,64,67,0.10),0_2px_6px_2px_rgba(60,64,67,0.08)] shrink-0 w-full max-w-[340px] sm:w-[340px] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(0,0,0,0.20)]"
+      className="bg-white flex flex-col gap-[12px] h-full p-[24px] relative rounded-[8px] shadow-[0_1px_2px_0_rgba(60,64,67,0.10),0_2px_6px_2px_rgba(60,64,67,0.08)] shrink-0 w-full max-w-[340px] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(0,0,0,0.20)]"
       data-name="Google review"
     >
       <div className="flex gap-[12px] items-center relative shrink-0">
@@ -934,7 +934,7 @@ function GoogleReview({ initial, name, text }: { initial: string; name: string; 
 
 function Frame35() {
   return (
-    <div className="flex flex-wrap gap-[24px] items-start justify-center max-w-[1092px] relative shrink-0" data-name="Frame">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] items-stretch justify-items-center max-w-[1092px] w-full relative shrink-0" data-name="Frame">
       <GoogleReview
         initial="R"
         name="Renato Machado"

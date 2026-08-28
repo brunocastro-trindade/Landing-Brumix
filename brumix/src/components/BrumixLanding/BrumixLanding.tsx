@@ -240,7 +240,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => gtag_report_conversion()}
-            className="bg-[#187a3d] font-['Inter',sans-serif] font-semibold px-[16px] py-[9px] rounded-[999px] text-[13px] text-white whitespace-nowrap transition-colors duration-200 hover:bg-[#146633]"
+            className="bg-[#187a3d] flex items-center font-['Inter',sans-serif] font-semibold px-[16px] min-h-[44px] rounded-[999px] text-[13px] text-white whitespace-nowrap transition-colors duration-200 hover:bg-[#146633]"
           >
             Orçamento
           </a>
@@ -249,7 +249,7 @@ function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             aria-expanded={open}
-            className="grid place-items-center size-[40px] rounded-[10px] text-[#12161a] transition-colors duration-200 hover:bg-[#f1f2f3]"
+            className="grid place-items-center size-[44px] rounded-[10px] text-[#12161a] transition-colors duration-200 hover:bg-[#f1f2f3]"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               {open ? (
@@ -409,10 +409,10 @@ function DiferencialItem({ children }: { children: string }) {
 
 function Frame14() {
   return (
-    <div className="[word-break:break-word] flex flex-col gap-[16px] items-start max-w-[620px] not-italic relative shrink-0" data-name="Frame">
+    <div className="[word-break:break-word] flex flex-col gap-[16px] items-start max-w-[620px] not-italic relative shrink-0 w-full lg:w-auto" data-name="Frame">
       <p className="font-['Inter',sans-serif] font-bold relative shrink-0 text-[13px] text-white/80 tracking-[0.16em]">PREÇO SEM SURPRESA</p>
-      <h2 className="font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[44px] relative shrink-0 text-[26px] sm:text-[31px] lg:text-[37px] text-white">Preço justo, sem pegadinha no orçamento.</h2>
-      <p className="font-['Inter',sans-serif] font-normal leading-[24px] max-w-[540px] relative shrink-0 text-[#ffd9d9] text-[16px]">Concreto de qualidade, aplicação inclusa e parcelas que cabem no seu caixa.</p>
+      <h2 className="w-full font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[44px] relative shrink-0 text-[26px] sm:text-[31px] lg:text-[37px] text-white">Preço justo, sem pegadinha no orçamento.</h2>
+      <p className="w-full font-['Inter',sans-serif] font-normal leading-[24px] max-w-[540px] relative shrink-0 text-[#ffd9d9] text-[16px]">Concreto de qualidade, aplicação inclusa e parcelas que cabem no seu caixa.</p>
       <div className="flex flex-wrap gap-x-[24px] gap-y-[10px] pt-[6px]">
         <DiferencialItem>Aplicação inclusa</DiferencialItem>
         <DiferencialItem>Parcelamos em até 10x</DiferencialItem>
@@ -449,7 +449,7 @@ function Diferenciais() {
     >
       <div aria-hidden className="absolute bg-white/[0.06] pointer-events-none rounded-full size-[360px] -right-[90px] -top-[130px]" />
       <div aria-hidden className="absolute bg-black/[0.05] pointer-events-none rounded-full size-[320px] -bottom-[170px] -left-[110px]" />
-      <div data-reveal className="flex flex-wrap gap-[40px] items-center justify-between max-w-[1440px] mx-auto px-5 md:px-10 lg:px-[100px] py-14 md:py-[72px] relative w-full">
+      <div data-reveal className="flex flex-col lg:flex-row gap-[40px] lg:items-center lg:justify-between max-w-[1440px] mx-auto px-5 md:px-10 lg:px-[100px] py-14 md:py-[72px] relative w-full">
         <Frame14 />
         <Frame15 />
       </div>
@@ -810,9 +810,9 @@ function Frame29() {
 
 function Frame28() {
   return (
-    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0" data-name="Frame">
+    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0 w-full" data-name="Frame">
       <Frame29 />
-      <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#12161a] text-[16px] max-w-[470px]">Parcelamos em até 10x no cartão para sua obra continuar rodando.</p>
+      <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative min-w-0 text-[#12161a] text-[16px] max-w-[470px]">Parcelamos em até 10x no cartão para sua obra continuar rodando.</p>
     </div>
   );
 }
@@ -838,9 +838,9 @@ function Frame31() {
 
 function Frame30() {
   return (
-    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0" data-name="Frame">
+    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0 w-full" data-name="Frame">
       <Frame31 />
-      <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#12161a] text-[16px] max-w-[470px]">Zero equipe parada, zero cronograma perdido.</p>
+      <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative min-w-0 text-[#12161a] text-[16px] max-w-[470px]">Zero equipe parada, zero cronograma perdido.</p>
     </div>
   );
 }
@@ -1009,9 +1009,9 @@ function Frame51() {
 
 function Frame50() {
   return (
-    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0" data-name="Frame">
+    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0 w-full" data-name="Frame">
       <Frame51 />
-      <p className="[word-break:break-word] font-['Inter',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#e5e5e8] text-[16px] max-w-[420px]">Time de braços cruzados esperando o caminhão</p>
+      <p className="[word-break:break-word] font-['Inter',sans-serif] font-medium leading-[normal] not-italic relative min-w-0 text-[#e5e5e8] text-[16px] max-w-[420px]">Time de braços cruzados esperando o caminhão</p>
     </div>
   );
 }
@@ -1045,9 +1045,9 @@ function Frame53() {
 
 function Frame52() {
   return (
-    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0" data-name="Frame">
+    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0 w-full" data-name="Frame">
       <Frame53 />
-      <p className="[word-break:break-word] font-['Inter',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#e5e5e8] text-[16px] max-w-[420px]">Prazo da obra comprometido</p>
+      <p className="[word-break:break-word] font-['Inter',sans-serif] font-medium leading-[normal] not-italic relative min-w-0 text-[#e5e5e8] text-[16px] max-w-[420px]">Prazo da obra comprometido</p>
     </div>
   );
 }
@@ -1081,9 +1081,9 @@ function Frame55() {
 
 function Frame54() {
   return (
-    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0" data-name="Frame">
+    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0 w-full" data-name="Frame">
       <Frame55 />
-      <p className="[word-break:break-word] font-['Inter',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#e5e5e8] text-[16px] max-w-[420px]">Cliente cobrando satisfações</p>
+      <p className="[word-break:break-word] font-['Inter',sans-serif] font-medium leading-[normal] not-italic relative min-w-0 text-[#e5e5e8] text-[16px] max-w-[420px]">Cliente cobrando satisfações</p>
     </div>
   );
 }
@@ -1117,16 +1117,16 @@ function Frame57() {
 
 function Frame56() {
   return (
-    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0" data-name="Frame">
+    <div className="content-stretch flex gap-[14px] items-center overflow-clip relative shrink-0 w-full" data-name="Frame">
       <Frame57 />
-      <p className="[word-break:break-word] font-['Inter',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#e5e5e8] text-[16px] max-w-[420px]">Cada hora parada tem um custo real</p>
+      <p className="[word-break:break-word] font-['Inter',sans-serif] font-medium leading-[normal] not-italic relative min-w-0 text-[#e5e5e8] text-[16px] max-w-[420px]">Cada hora parada tem um custo real</p>
     </div>
   );
 }
 
 function Frame49() {
   return (
-    <div className="content-stretch flex flex-col gap-[14px] items-start overflow-clip pt-[8px] relative shrink-0" data-name="Frame">
+    <div className="content-stretch flex flex-col gap-[14px] items-start overflow-clip pt-[8px] relative shrink-0 w-full" data-name="Frame">
       <Frame50 />
       <Frame52 />
       <Frame54 />
@@ -1319,7 +1319,7 @@ function Frame77() {
 
 function Frame76() {
   return (
-    <a href={TEL_HREF} className="flex gap-[10px] items-center relative shrink-0 group" data-name="Frame">
+    <a href={TEL_HREF} className="flex gap-[10px] items-center relative shrink-0 group py-[13px] -my-[13px]" data-name="Frame">
       <Frame77 />
       <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[15px] text-white transition-colors duration-200 group-hover:text-[#28af5a] whitespace-nowrap">(47) 99683-4908</p>
     </a>
@@ -1365,7 +1365,7 @@ function Frame79() {
         href={`https://www.google.com/maps/dir/?api=1&destination=${query}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#187a3d] block font-['Inter',sans-serif] font-semibold leading-[normal] not-italic py-[11px] relative shrink-0 text-[13px] text-center text-white"
+        className="bg-[#187a3d] block font-['Inter',sans-serif] font-semibold leading-[normal] not-italic py-[14px] relative shrink-0 text-[13px] text-center text-white"
       >
         Como chegar
       </a>
@@ -1402,7 +1402,7 @@ function Frame80() {
     <div className="bg-[#1d2227] relative shrink-0 w-full" data-name="Frame">
       <div className="flex flex-row items-center justify-center overflow-clip rounded-[inherit] size-full">
         <div className="flex items-center justify-center px-5 md:px-10 lg:px-[100px] py-[24px] relative size-full">
-          <p className="font-['Inter',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#9499a1] text-[12px] sm:text-[13px] text-center">© 2026 Brumix — Todos os direitos reservados&nbsp;&nbsp;|&nbsp;&nbsp;Desenvolvido por Sekoia Marketing</p>
+          <p className="w-full font-['Inter',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#9499a1] text-[12px] sm:text-[13px] text-center">© 2026 Brumix — Todos os direitos reservados&nbsp;&nbsp;|&nbsp;&nbsp;Desenvolvido por Sekoia Marketing</p>
         </div>
       </div>
     </div>

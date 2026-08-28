@@ -66,21 +66,32 @@ export function useScrollAnimations(root: RefObject<HTMLElement | null>) {
       gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((group) => {
         const items = gsap.utils.toArray<HTMLElement>(group.children);
         if (!items.length) return;
+        // Some items (CTA buttons) carry their own CSS `transition-all`
+        // for hover effects. That fights GSAP's own per-frame inline
+        // opacity/transform writes during the reveal — the two engines
+        // both drive the same properties, and the item can end up stuck
+        // invisible instead of reaching its revealed state. Suppress the
+        // CSS transition while GSAP is driving the reveal, then hand it
+        // back once the tween completes.
+        gsap.set(items, { transition: "none" });
         gsap.from(items, {
           y: 42,
           autoAlpha: 0,
           duration: 0.8,
           ease: "power2.out",
           stagger: 0.12,
+          clearProps: "transition",
           scrollTrigger: { trigger: group, start: "top 80%", once: true },
         });
       });
 
-      // Recalcula posições depois que fontes/imagens assentam
+      // GSAP 3.11+ already auto-refreshes ScrollTrigger on "load" (see
+      // ScrollTrigger.config().autoRefreshEvents) — a second manual
+      // refresh() around that same event risked landing mid-flight of a
+      // still-playing staggered reveal tween and resetting it back to its
+      // hidden "from" state, permanently. One explicit refresh right after
+      // setup is enough to get correct initial positions.
       ScrollTrigger.refresh();
-      const onLoad = () => ScrollTrigger.refresh();
-      window.addEventListener("load", onLoad);
-      return () => window.removeEventListener("load", onLoad);
     }, el);
 
     return () => ctx.revert();

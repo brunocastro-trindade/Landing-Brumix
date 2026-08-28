@@ -26,6 +26,9 @@ Node 20+ (pinned to 22 via `.nvmrc` / `.mise.toml`).
   - `*.png` — hero / section imagery
 - `src/index.css` — Tailwind v4 entry (`@import "tailwindcss";`) + base font-family
 - `vite.config.ts` — React plugin, Tailwind v4 plugin, `@` → `src` alias
+- `public/` — static files served as-is: `robots.txt`, `llms.txt`, `sitemap.xml`,
+  `.well-known/ai.txt`, `ai/summary.json`, `ai/faq.json`, `og-image.jpg`, `logo.png`
+  (see "GEO / AI visibility" below)
 
 ## Styling
 
@@ -46,3 +49,27 @@ no external font CDN.
   stack with `flex-col lg:flex-row`; the header collapses to a hamburger
   (`useState`) below `lg`. Keep new elements responsive in the same style.
 - Use double quotes for strings containing apostrophes, or escape them.
+
+## GEO / AI visibility
+
+This is a client-rendered SPA (no SSR/SSG), so AI crawlers that don't execute
+JavaScript (GPTBot, ClaudeBot, PerplexityBot, etc.) see an empty `<div
+id="root">` unless the raw HTML carries real content. Two things cover that:
+
+- `index.html` `<head>` — canonical link, Open Graph/Twitter tags, and three
+  `<script type="application/ld+json">` blocks (WebSite, LocalBusiness, FAQPage).
+  Static, always sent, always in sync with the code below it.
+- `index.html` `<noscript>` — a plain-text mirror of the hero/services/pricing/
+  contact copy for non-JS crawlers. **Keep this in sync by hand** whenever that
+  copy changes in `BrumixLanding.tsx` — nothing enforces it automatically.
+
+`public/llms.txt`, `public/ai/summary.json`, and `public/ai/faq.json` carry the
+same facts (company info, services, phone, address) in the formats those specs
+expect — update them together with the JSON-LD/noscript block, not separately.
+Every fact in all of these (phone, address, years in business, fleet size,
+services) must trace back to real copy in `BrumixLanding.tsx`; never fill a gap
+with a placeholder.
+
+Audited and generated with the [`geo-optimizer-skill`](.claude/skills/geo-optimizer/SKILL.md)
+project skill (`geo audit --url https://brumixconcreto.com.br`) — see that file
+for the full workflow and the `geo` CLI install step.

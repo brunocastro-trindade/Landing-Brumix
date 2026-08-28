@@ -177,7 +177,7 @@ function Frame1() {
   );
 }
 
-const TEL_HREF = "tel:+5547991881964";
+const TEL_HREF = "tel:+5547996834908";
 const WHATSAPP_HREF = "https://api.whatsapp.com/send?phone=5547996834908&text=Tenho%20interesse%20em%20concreto%20usinado";
 
 function Frame3() {
@@ -187,7 +187,7 @@ function Frame3() {
       className="[word-break:break-word] bg-white flex flex-col items-start leading-[normal] not-italic relative shrink-0 whitespace-nowrap group"
       data-name="Frame"
     >
-      <p className="font-['Inter',sans-serif] font-bold relative shrink-0 text-[#12161a] text-[15px] transition-colors duration-200 group-hover:text-[#d91b29]">(47) 99188-1964</p>
+      <p className="font-['Inter',sans-serif] font-bold relative shrink-0 text-[#12161a] text-[15px] transition-colors duration-200 group-hover:text-[#d91b29]">(47) 99683-4908</p>
       <p className="font-['Inter',sans-serif] font-normal relative shrink-0 text-[#9ea6ad] text-[11px]">Fale agora</p>
     </a>
   );
@@ -267,7 +267,7 @@ function Header() {
             </a>
           ))}
           <a href={TEL_HREF} className="font-['Inter',sans-serif] font-bold py-[14px] text-[#12161a] text-[15px]">
-            (47) 99188-1964
+            (47) 99683-4908
           </a>
         </div>
       )}
@@ -301,7 +301,7 @@ function Frame9() {
   return (
     <a href={TEL_HREF} className="group relative rounded-[999px] shrink-0 w-full sm:w-auto transition-all duration-200 hover:-translate-y-0.5" data-name="Frame">
       <div className="flex items-center justify-center sm:justify-start px-[30px] py-[16px] relative rounded-[inherit] size-full">
-        <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">(47) 99188-1964</p>
+        <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">(47) 99683-4908</p>
       </div>
       <div aria-hidden className="absolute border-[#666b73] border-[1.5px] border-solid inset-0 pointer-events-none rounded-[999px] transition-colors duration-200 group-hover:border-white group-hover:bg-white/5" />
     </a>
@@ -359,7 +359,7 @@ function Frame5() {
     <div data-hero-content className="relative w-full max-w-[1440px] mx-auto px-5 md:px-10 lg:px-[100px] py-20 md:py-24 lg:py-[120px]" data-name="Frame">
       <div className="flex flex-col gap-6 md:gap-[28px] items-start max-w-[640px]">
         <Frame6 />
-        <p className="[word-break:break-word] font-['Inter',sans-serif] font-extrabold leading-[1.1] lg:leading-[60px] not-italic relative shrink-0 text-[32px] sm:text-[42px] lg:text-[52px] text-white">O concreto chega na hora. O pagamento cabe no seu bolso.</p>
+        <h1 className="[word-break:break-word] font-['Inter',sans-serif] font-extrabold leading-[1.1] lg:leading-[60px] not-italic relative shrink-0 text-[32px] sm:text-[42px] lg:text-[52px] text-white">O concreto chega na hora. O pagamento cabe no seu bolso.</h1>
         <p className="[word-break:break-word] font-['Inter',sans-serif] font-normal leading-[26px] md:leading-[28px] not-italic relative shrink-0 text-[#bfc4c9] text-[16px] md:text-[18px] max-w-[560px]">Fuja do improviso: com frota própria e parcelamento facilitado, sua obra não fica esperando concreto chegar.</p>
         <Frame7 />
         <Frame10 />
@@ -394,7 +394,7 @@ function Frame14() {
   return (
     <div className="[word-break:break-word] flex flex-col gap-[16px] items-start max-w-[620px] not-italic relative shrink-0" data-name="Frame">
       <p className="font-['Inter',sans-serif] font-bold relative shrink-0 text-[13px] text-white/80 tracking-[0.16em]">PREÇO SEM SURPRESA</p>
-      <p className="font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[44px] relative shrink-0 text-[26px] sm:text-[31px] lg:text-[37px] text-white">Preço justo, sem pegadinha no orçamento.</p>
+      <h2 className="font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[44px] relative shrink-0 text-[26px] sm:text-[31px] lg:text-[37px] text-white">Preço justo, sem pegadinha no orçamento.</h2>
       <p className="font-['Inter',sans-serif] font-normal leading-[24px] max-w-[540px] relative shrink-0 text-[#ffd9d9] text-[16px]">Concreto de qualidade, aplicação inclusa e parcelas que cabem no seu caixa.</p>
       <div className="flex flex-wrap gap-x-[24px] gap-y-[10px] pt-[6px]">
         <DiferencialItem>Aplicação inclusa</DiferencialItem>
@@ -443,7 +443,7 @@ function Frame16() {
   return (
     <div className="[word-break:break-word] flex flex-col gap-[12px] items-center leading-[normal] not-italic relative shrink-0 text-center" data-name="Frame">
       <p className="font-['Inter',sans-serif] font-bold relative shrink-0 text-[#d91b29] text-[13px]">NOSSAS FRENTES DE TRABALHO</p>
-      <p className="font-['Inter',sans-serif] font-extrabold relative shrink-0 text-[#12161a] text-[25px] sm:text-[30px] lg:text-[34px] text-center max-w-[520px]">Como ajudamos sua obra a andar</p>
+      <h2 className="font-['Inter',sans-serif] font-extrabold relative shrink-0 text-[#12161a] text-[25px] sm:text-[30px] lg:text-[34px] text-center max-w-[520px]">Como ajudamos sua obra a andar</h2>
     </div>
   );
 }
@@ -844,7 +844,7 @@ function Frame32() {
 function Frame27() {
   return (
     <div className="flex flex-col gap-[24px] items-start relative shrink-0 w-full lg:max-w-[560px]" data-name="Frame">
-      <p className="[word-break:break-word] font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[40px] not-italic relative shrink-0 text-[#12161a] text-[25px] sm:text-[30px] lg:text-[34px] max-w-[540px]">Todo mestre de obra já passou por isso:</p>
+      <h2 className="[word-break:break-word] font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[40px] not-italic relative shrink-0 text-[#12161a] text-[25px] sm:text-[30px] lg:text-[34px] max-w-[540px]">Todo mestre de obra já passou por isso:</h2>
       <p className="[word-break:break-word] font-['Inter',sans-serif] font-normal leading-[26px] not-italic relative shrink-0 text-[#4d5259] text-[17px] max-w-[500px]">Aqui, o cronograma da obra não depende do seu caixa estar cheio.</p>
       <Frame28 />
       <Frame30 />
@@ -882,7 +882,7 @@ function Frame34() {
   return (
     <div className="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-center leading-[normal] not-italic overflow-clip relative shrink-0 text-center" data-name="Frame">
       <p className="font-['Inter',sans-serif] font-bold relative shrink-0 text-[#d91b29] text-[13px]">AVALIAÇÕES REAIS</p>
-      <p className="font-['Inter',sans-serif] font-extrabold relative shrink-0 text-[25px] sm:text-[30px] lg:text-[34px] text-white">A satisfação de quem já construiu com a gente</p>
+      <h2 className="font-['Inter',sans-serif] font-extrabold relative shrink-0 text-[25px] sm:text-[30px] lg:text-[34px] text-white">A satisfação de quem já construiu com a gente</h2>
     </div>
   );
 }
@@ -1149,10 +1149,10 @@ function Frame48() {
       className="[word-break:break-word] backdrop-blur-[3px] bg-[rgba(11,14,17,0.52)] border border-white/10 flex flex-col gap-5 lg:gap-[22px] items-start max-w-[588px] p-6 sm:p-8 lg:p-[44px] relative rounded-[24px] lg:rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.4)] shrink-0 w-full"
       data-name="Frame"
     >
-      <div className="flex flex-col gap-[6px]">
-        <p className="font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[40px] not-italic relative shrink-0 text-[25px] sm:text-[29px] lg:text-[33px] text-white">Hora parada no canteiro não é imprevisto.</p>
-        <p className="font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[40px] not-italic relative shrink-0 text-[#ff4d58] text-[25px] sm:text-[29px] lg:text-[33px]">É prejuízo saindo direto do seu bolso.</p>
-      </div>
+      <h2 className="flex flex-col gap-[6px]">
+        <span className="font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[40px] not-italic relative shrink-0 text-[25px] sm:text-[29px] lg:text-[33px] text-white">Hora parada no canteiro não é imprevisto.</span>
+        <span className="font-['Inter',sans-serif] font-extrabold leading-[1.15] lg:leading-[40px] not-italic relative shrink-0 text-[#ff4d58] text-[25px] sm:text-[29px] lg:text-[33px]">É prejuízo saindo direto do seu bolso.</span>
+      </h2>
       <Frame49 />
       <p className="font-['Inter',sans-serif] font-normal leading-[25px] not-italic relative shrink-0 text-[#c9ced4] text-[16px]">Com a Brumix, o concreto chega no dia e horário combinados — sua equipe segue produtiva, sem esperar e sem perder ritmo de obra.</p>
       <Frame58 />
@@ -1186,7 +1186,7 @@ function ObraParada() {
 function Frame63() {
   return (
     <div className="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-center not-italic overflow-clip relative shrink-0 text-center" data-name="Frame">
-      <p className="font-['Inter',sans-serif] font-extrabold leading-[1.2] relative shrink-0 text-[24px] sm:text-[28px] lg:text-[32px] text-white">Cobrindo toda a região do litoral norte catarinense</p>
+      <h2 className="font-['Inter',sans-serif] font-extrabold leading-[1.2] relative shrink-0 text-[24px] sm:text-[28px] lg:text-[32px] text-white">Cobrindo toda a região do litoral norte catarinense</h2>
       <p className="font-['Inter',sans-serif] font-normal leading-[24px] relative shrink-0 text-[#ffe0e0] text-[16px] max-w-[620px]">De Penha às cidades vizinhas, levamos concreto com agilidade e parcelamento facilitado até a sua obra.</p>
     </div>
   );
@@ -1296,7 +1296,7 @@ function Frame76() {
   return (
     <a href={TEL_HREF} className="flex gap-[10px] items-center relative shrink-0 group" data-name="Frame">
       <Frame77 />
-      <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[15px] text-white transition-colors duration-200 group-hover:text-[#28af5a] whitespace-nowrap">(47) 99188-1964</p>
+      <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[15px] text-white transition-colors duration-200 group-hover:text-[#28af5a] whitespace-nowrap">(47) 99683-4908</p>
     </a>
   );
 }

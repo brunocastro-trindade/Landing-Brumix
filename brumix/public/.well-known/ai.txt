@@ -1,0 +1,10 @@
+# ai.txt — brumixconcreto.com.br
+# AI crawler permissions for this site.
+
+User-agent: *
+Allow: /
+Content-usage: search-citation, answer-generation
+
+Contact: (47) 99188-1964
+Sitemap: https://brumixconcreto.com.br/sitemap.xml
+Llms: https://brumixconcreto.com.br/llms.txt

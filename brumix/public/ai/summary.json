@@ -1,0 +1,28 @@
+{
+  "name": "Brumix",
+  "tagline": "O concreto catarinense",
+  "description": "Concreto usinado com frota própria, entrega no horário combinado e parcelamento facilitado no litoral norte catarinense.",
+  "url": "https://brumixconcreto.com.br",
+  "logo": "https://brumixconcreto.com.br/logo.png",
+  "telephone": "+5547996834908",
+  "address": {
+    "streetAddress": "Rod. Paulo Stuart Wright, 1285 - Nossa Sra. de Fátima",
+    "addressLocality": "Penha",
+    "addressRegion": "SC",
+    "postalCode": "88385-000",
+    "addressCountry": "BR"
+  },
+  "areaServed": "Litoral norte catarinense",
+  "services": [
+    "Canteiro de obras",
+    "Projetos especiais",
+    "Suporte técnico direto na obra",
+    "Bombeamento e espalhamento sob medida"
+  ],
+  "yearsInBusiness": 10,
+  "fleet": {
+    "trucks": 8,
+    "pumps": 4
+  },
+  "lastModified": "2026-08-28"
+}

@@ -1,0 +1,24 @@
+# Brumix
+
+> Concreto usinado com frota própria, entrega no horário combinado e
+> parcelamento facilitado, atendendo obras no litoral norte catarinense
+> a partir de Penha, SC.
+
+Brumix concretamos obras no litoral catarinense há 10 anos, com frota
+própria (8 caminhões betoneira e 4 bombas prontas para uso) e o
+compromisso de nunca deixar a equipe do cliente esperando o concreto
+chegar. O pagamento pode ser parcelado em até 10x, sem taxa escondida,
+e a aplicação está inclusa no serviço.
+
+## Sections
+
+- [Serviços](https://brumixconcreto.com.br/#servicos): Frentes de trabalho — canteiro de obras, projetos especiais, suporte técnico direto na obra, bombeamento e espalhamento sob medida.
+- [Diferenciais](https://brumixconcreto.com.br/#diferenciais): Preço justo e parcelamento facilitado — parcelamos em até 10x, sem taxa escondida, aplicação inclusa.
+- [Depoimentos](https://brumixconcreto.com.br/#depoimentos): Avaliações reais de clientes que já construíram com a Brumix.
+- [Área de atendimento](https://brumixconcreto.com.br/#atendimento): Cobertura de toda a região do litoral norte catarinense.
+- [Contato](https://brumixconcreto.com.br/#contato): Telefone, WhatsApp e localização — Rod. Paulo Stuart Wright, 1285, Nossa Sra. de Fátima, Penha - SC, 88385-000.
+
+## Optional
+
+- [robots.txt](https://brumixconcreto.com.br/robots.txt): Crawler access rules.
+- [sitemap.xml](https://brumixconcreto.com.br/sitemap.xml): Page index.

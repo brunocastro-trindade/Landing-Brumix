@@ -1,0 +1,54 @@
+# robots.txt — brumixconcreto.com.br
+# Allows standard search crawlers and AI/answer-engine crawlers
+# (ChatGPT Search, Perplexity, Claude, Gemini/Google AI Overviews) to
+# read and cite this site. Generated with help from geo-optimizer-skill
+# (https://github.com/Auriti-Labs/geo-optimizer-skill).
+
+User-agent: *
+Allow: /
+
+# OpenAI — ChatGPT search citations / on-demand fetch
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic — Claude search citations / on-demand fetch
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google Search + AI Overviews / Gemini
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Bing / Copilot
+User-agent: Bingbot
+Allow: /
+
+# Others
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://brumixconcreto.com.br/sitemap.xml

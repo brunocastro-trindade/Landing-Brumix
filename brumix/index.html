@@ -25,15 +25,52 @@
     <link rel="preconnect" href="https://g.clarity.ms" />
 
     <!--
-      Google tag (gtag.js) + Microsoft Clarity — loaded on the visitor's
-      first real interaction (scroll/click/touch/keypress), with a 8s
-      fallback so a visitor who just reads without interacting is still
-      tracked. This keeps their ~1.2s combined script-evaluation cost off
-      the initial render entirely instead of merely delaying it to `load`.
-      Trade-off: a visitor who leaves within ~8s without scrolling or
-      clicking anything won't be tracked — a real cost for a landing page
-      whose whole job is to get a click, so revisit this if bounce-heavy
-      traffic ends up under-counted in GA/Clarity.
+      gtag() is always safe to call from anywhere (this stub just queues to
+      dataLayer — near-zero cost), so the "js"/"config" calls and the
+      conversion-reporting helper below run immediately. Only the actual
+      gtag.js SCRIPT (the ~170KB that has to download/parse/eval) is
+      deferred further down — that's the expensive part, not these calls.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", "G-EHYLCHFFC9");
+      gtag("config", "AW-18248375859");
+
+      // Event snippet for Contato (8) conversion. Call from onClick on a
+      // WhatsApp CTA — no `url` needed for those since they open in a new
+      // tab (target="_blank"), so there's nothing to delay navigation for.
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-18248375859/IM5iCJuCzM0cELO8wP1D",
+          value: 1.0,
+          currency: "BRL",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
+
+    <!--
+      Google tag (gtag.js) + Microsoft Clarity — the scripts themselves
+      load on the visitor's first real interaction (scroll/click/touch/
+      keypress), with an 8s fallback so a visitor who just reads without
+      interacting is still tracked. This keeps their ~1.2s combined
+      script-evaluation cost off the initial render entirely instead of
+      merely delaying it to `load`. Trade-off: a visitor who leaves within
+      ~8s without scrolling or clicking anything won't be tracked — a real
+      cost for a landing page whose whole job is to get a click, so
+      revisit this if bounce-heavy traffic ends up under-counted in
+      GA/Clarity/Ads.
     -->
     <script>
       function brumixLoadAnalytics() {
@@ -41,14 +78,6 @@
         gtagScript.async = true;
         gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-EHYLCHFFC9";
         document.head.appendChild(gtagScript);
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        window.gtag = gtag;
-        gtag("js", new Date());
-        gtag("config", "G-EHYLCHFFC9");
-        gtag("config", "AW-18248375859");
 
         (function (c, l, a, r, i, t, y) {
           c[a] =

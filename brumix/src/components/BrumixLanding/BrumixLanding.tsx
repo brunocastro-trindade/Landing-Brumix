@@ -204,6 +204,7 @@ function Frame4() {
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => gtag_report_conversion()}
       className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[22px] py-[12px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(24,122,61,0.35)] active:translate-y-0"
       data-name="Frame"
     >
@@ -238,6 +239,7 @@ function Header() {
             href={WHATSAPP_HREF}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => gtag_report_conversion()}
             className="bg-[#187a3d] font-['Inter',sans-serif] font-semibold px-[16px] py-[9px] rounded-[999px] text-[13px] text-white whitespace-nowrap transition-colors duration-200 hover:bg-[#146633]"
           >
             Orçamento
@@ -294,6 +296,7 @@ function Frame8() {
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => gtag_report_conversion()}
       className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 w-full sm:w-auto transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0"
       data-name="Frame"
     >
@@ -425,6 +428,7 @@ function Frame15() {
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => gtag_report_conversion()}
       className="group bg-white flex gap-[10px] items-center px-[30px] py-[17px] relative rounded-[999px] shadow-[0_10px_30px_rgba(0,0,0,0.18)] shrink-0 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.3)] active:translate-y-0"
       data-name="Frame"
     >
@@ -764,7 +768,7 @@ function Frame17() {
 
 function Frame26() {
   return (
-    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Peça seu orçamento sem compromisso</p></a>
+    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" onClick={() => gtag_report_conversion()} className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Peça seu orçamento sem compromisso</p></a>
   );
 }
 
@@ -843,7 +847,7 @@ function Frame30() {
 
 function Frame33() {
   return (
-    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Quero parcelar meu concreto</p></a>
+    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" onClick={() => gtag_report_conversion()} className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Quero parcelar meu concreto</p></a>
   );
 }
 
@@ -1154,7 +1158,7 @@ function Frame58() {
 
 function Frame62() {
   return (
-    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Quero evitar prejuízo na minha obra</p></a>
+    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" onClick={() => gtag_report_conversion()} className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Quero evitar prejuízo na minha obra</p></a>
   );
 }
 
@@ -1246,6 +1250,7 @@ function Frame71() {
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => gtag_report_conversion()}
       className="bg-[#12161a] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#1f262e] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(0,0,0,0.35)] active:translate-y-0"
       data-name="Frame"
     >

@@ -4,32 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHYLCHFFC9"></script>
+    <!--
+      Preload the hero photo (the LCP element). It's only added to the DOM
+      once React renders, so without this the browser's preload scanner
+      can't discover it until the JS bundle has downloaded and run.
+    -->
+    <link
+      rel="preload"
+      as="image"
+      href="/hero/hero-1920w.webp"
+      imagesrcset="/hero/hero-960w.webp 960w, /hero/hero-1920w.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+
+    <!-- Warm up the analytics origins so their scripts/beacons connect faster -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://scripts.clarity.ms" />
+    <link rel="preconnect" href="https://g.clarity.ms" />
+
+    <!--
+      Google tag (gtag.js) + Microsoft Clarity — loaded on the visitor's
+      first real interaction (scroll/click/touch/keypress), with a 8s
+      fallback so a visitor who just reads without interacting is still
+      tracked. This keeps their ~1.2s combined script-evaluation cost off
+      the initial render entirely instead of merely delaying it to `load`.
+      Trade-off: a visitor who leaves within ~8s without scrolling or
+      clicking anything won't be tracked — a real cost for a landing page
+      whose whole job is to get a click, so revisit this if bounce-heavy
+      traffic ends up under-counted in GA/Clarity.
+    -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      function brumixLoadAnalytics() {
+        var gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-EHYLCHFFC9";
+        document.head.appendChild(gtagScript);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        window.gtag = gtag;
+        gtag("js", new Date());
+        gtag("config", "G-EHYLCHFFC9");
+
+        (function (c, l, a, r, i, t, y) {
+          c[a] =
+            c[a] ||
+            function () {
+              (c[a].q = c[a].q || []).push(arguments);
+            };
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "y9gkcsac8j");
       }
-      gtag("js", new Date());
-
-      gtag("config", "G-EHYLCHFFC9");
-    </script>
-
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            (c[a].q = c[a].q || []).push(arguments);
-          };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "y9gkcsac8j");
+      (function () {
+        var loaded = false;
+        var events = ["pointerdown", "touchstart", "keydown", "scroll"];
+        var timeoutId;
+        function trigger() {
+          if (loaded) return;
+          loaded = true;
+          clearTimeout(timeoutId);
+          events.forEach(function (evt) {
+            window.removeEventListener(evt, trigger, { passive: true });
+          });
+          brumixLoadAnalytics();
+        }
+        events.forEach(function (evt) {
+          window.addEventListener(evt, trigger, { passive: true, once: true });
+        });
+        timeoutId = setTimeout(trigger, 8000);
+      })();
     </script>
 
     <title>Brumix : O concreto catarinense</title>

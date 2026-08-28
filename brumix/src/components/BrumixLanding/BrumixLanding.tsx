@@ -1,9 +1,14 @@
 import { useRef, useState } from "react";
 import svgPaths from "./svg-paths";
-import imgBrumixLogo1024X386Webp from "./brumix-logo.png";
-import imgHero from "./hero.png";
-import imgPagamentoImagePlaceholder from "./pagamento.png";
-import imgObraParada from "./obra-parada.png";
+import imgBrumixLogo480 from "./brumix-logo-480w.webp";
+// Served from public/hero/ (not bundled) so index.html can <link rel="preload">
+// them by a stable URL — this is the LCP image, and preloading it is what
+// lets the browser start the fetch before React has rendered anything.
+const imgHero960 = "/hero/hero-960w.webp";
+const imgHero1920 = "/hero/hero-1920w.webp";
+import imgPagamentoImagePlaceholder from "./pagamento-1200w.webp";
+import imgObraParada960 from "./obra-parada-960w.webp";
+import imgObraParada1600 from "./obra-parada-1600w.webp";
 import { useScrollAnimations } from "./useScrollAnimations";
 type ComponentProps = {
   className?: string;
@@ -139,7 +144,7 @@ function BrumixLogo1024X386Webp() {
   return (
     <div className="h-[52px] w-[138px] sm:h-[73.27px] sm:w-[194.39px] relative shrink-0" data-name="brumix-logo-1024x386.webp">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-[100.01%] left-0 max-w-none top-0 w-full" src={imgBrumixLogo1024X386Webp} />
+        <img alt="" className="absolute h-[100.01%] left-0 max-w-none top-0 w-full" src={imgBrumixLogo480} />
       </div>
     </div>
   );
@@ -199,7 +204,7 @@ function Frame4() {
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-[#28af5a] flex items-center justify-center overflow-clip px-[22px] py-[12px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#229a4e] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(40,175,90,0.35)] active:translate-y-0"
+      className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[22px] py-[12px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(24,122,61,0.35)] active:translate-y-0"
       data-name="Frame"
     >
       <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">Solicitar orçamento</p>
@@ -233,7 +238,7 @@ function Header() {
             href={WHATSAPP_HREF}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#28af5a] font-['Inter',sans-serif] font-semibold px-[16px] py-[9px] rounded-[999px] text-[13px] text-white whitespace-nowrap transition-colors duration-200 hover:bg-[#229a4e]"
+            className="bg-[#187a3d] font-['Inter',sans-serif] font-semibold px-[16px] py-[9px] rounded-[999px] text-[13px] text-white whitespace-nowrap transition-colors duration-200 hover:bg-[#146633]"
           >
             Orçamento
           </a>
@@ -289,7 +294,7 @@ function Frame8() {
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-[#28af5a] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 w-full sm:w-auto transition-all duration-200 hover:bg-[#229a4e] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(40,175,90,0.4)] active:translate-y-0"
+      className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 w-full sm:w-auto transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0"
       data-name="Frame"
     >
       <p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Solicitar orçamento agora</p>
@@ -371,7 +376,16 @@ function Frame5() {
 function Hero() {
   return (
     <div className="flex items-center min-h-[560px] md:min-h-[680px] lg:min-h-[820px] overflow-clip relative shrink-0 w-full" data-name="Hero">
-      <img data-hero-img alt="Caminhão betoneira da Brumix descarregando concreto em obra" className="absolute inset-0 max-w-none object-cover object-[62%_center] pointer-events-none size-full scale-105" src={imgHero} />
+      <img
+        data-hero-img
+        alt="Caminhão betoneira da Brumix descarregando concreto em obra"
+        className="absolute inset-0 max-w-none object-cover object-[62%_center] pointer-events-none size-full scale-105"
+        src={imgHero1920}
+        srcSet={`${imgHero960} 960w, ${imgHero1920} 1920w`}
+        sizes="100vw"
+        fetchPriority="high"
+        decoding="async"
+      />
       <div className="absolute bg-gradient-to-r from-[rgba(11,14,17,0.95)] inset-0 to-[rgba(11,14,17,0.35)] md:to-[rgba(11,14,17,0.15)] via-[55%] via-[rgba(11,14,17,0.8)]" data-name="Overlay escurecido (legibilidade do texto)" />
       <Frame5 />
     </div>
@@ -750,7 +764,7 @@ function Frame17() {
 
 function Frame26() {
   return (
-    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#28af5a] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#229a4e] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(40,175,90,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Peça seu orçamento sem compromisso</p></a>
+    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Peça seu orçamento sem compromisso</p></a>
   );
 }
 
@@ -829,7 +843,7 @@ function Frame30() {
 
 function Frame33() {
   return (
-    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#28af5a] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#229a4e] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(40,175,90,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Quero parcelar meu concreto</p></a>
+    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Quero parcelar meu concreto</p></a>
   );
 }
 
@@ -860,6 +874,8 @@ function PagamentoImagePlaceholder() {
         alt="Equipe da Brumix trabalhando na concretagem de uma obra"
         className="absolute inset-0 max-w-none object-cover pointer-events-none size-full transition-transform duration-[600ms] ease-out group-hover:scale-105"
         src={imgPagamentoImagePlaceholder}
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );
@@ -1138,7 +1154,7 @@ function Frame58() {
 
 function Frame62() {
   return (
-    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#28af5a] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#229a4e] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(40,175,90,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Quero evitar prejuízo na minha obra</p></a>
+    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="bg-[#187a3d] flex items-center justify-center overflow-clip px-[30px] py-[16px] relative rounded-[999px] shrink-0 transition-all duration-200 hover:bg-[#146633] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,122,61,0.4)] active:translate-y-0" data-name="Frame"><p className="[word-break:break-word] font-['Inter',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">Quero evitar prejuízo na minha obra</p></a>
   );
 }
 
@@ -1171,7 +1187,11 @@ function ObraParada() {
       <img
         alt="Caminhão betoneira da Brumix pronto para a entrega — evite a obra parada"
         className="absolute inset-0 max-w-none object-cover object-[62%_58%] pointer-events-none size-full"
-        src={imgObraParada}
+        src={imgObraParada1600}
+        srcSet={`${imgObraParada960} 960w, ${imgObraParada1600} 1600w`}
+        sizes="100vw"
+        loading="lazy"
+        decoding="async"
       />
       <div aria-hidden className="absolute bg-gradient-to-r from-[rgba(11,14,17,0.88)] md:from-[rgba(11,14,17,0.8)] inset-0 to-[rgba(11,14,17,0.35)] md:to-transparent via-[42%] via-[rgba(11,14,17,0.35)] md:via-[rgba(11,14,17,0.28)]" data-name="Overlay" />
       <div aria-hidden className="absolute bg-gradient-to-t bottom-0 from-[rgba(11,14,17,0.6)] inset-x-0 pointer-events-none to-transparent h-[220px]" data-name="Vinheta inferior" />
@@ -1252,7 +1272,7 @@ function BrumixLogo1024X386Webp1() {
   return (
     <div className="h-[52px] w-[138px] sm:h-[73.27px] sm:w-[194.39px] relative shrink-0" data-name="brumix-logo-1024x386.webp">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-[100.01%] left-0 max-w-none top-0 w-full" src={imgBrumixLogo1024X386Webp} />
+        <img alt="" className="absolute h-[100.01%] left-0 max-w-none top-0 w-full" src={imgBrumixLogo480} />
       </div>
     </div>
   );
@@ -1340,7 +1360,7 @@ function Frame79() {
         href={`https://www.google.com/maps/dir/?api=1&destination=${query}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#28af5a] block font-['Inter',sans-serif] font-semibold leading-[normal] not-italic py-[11px] relative shrink-0 text-[13px] text-center text-white"
+        className="bg-[#187a3d] block font-['Inter',sans-serif] font-semibold leading-[normal] not-italic py-[11px] relative shrink-0 text-[13px] text-center text-white"
       >
         Como chegar
       </a>

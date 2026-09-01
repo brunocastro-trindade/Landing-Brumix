@@ -1337,10 +1337,9 @@ function Frame75() {
 }
 
 const BRUMIX_ENDERECO = "Rod. Paulo Stuart Wright, 1285 - Nossa Sra. de Fátima, Penha - SC, 88385-000";
-// Coordenadas do pino verificado da Brumix Concreto Usinado no Google Maps
-// (perfil do Google Meu Negócio) — mais precisas que geocodificar o texto
-// do endereço, que cai perto mas não exatamente no local certo.
-const BRUMIX_COORDS = "-26.7889533,-48.6746515";
+// Coordenadas exatas da página do Google Maps para esse endereço
+// (place_id 0x94d8d3a2e2eed147:0x43b68d412e173b58), fornecidas pelo cliente.
+const BRUMIX_COORDS = "-26.7850328,-48.6708329";
 
 function MapPinIcon() {
   return (

@@ -1337,9 +1337,12 @@ function Frame75() {
 }
 
 const BRUMIX_ENDERECO = "Rod. Paulo Stuart Wright, 1285 - Nossa Sra. de Fátima, Penha - SC, 88385-000";
-// Coordenadas exatas da página do Google Maps para esse endereço
-// (place_id 0x94d8d3a2e2eed147:0x43b68d412e173b58), fornecidas pelo cliente.
-const BRUMIX_COORDS = "-26.7850328,-48.6708329";
+// Coordenadas do local "Brumix Concreto Usinado" (place_id
+// 0x94d8d3f86e3bb7db:0xe838ac021b8f495e), extraídas do embed oficial
+// gerado pelo cliente em Google Maps > Compartilhar > Incorporar mapa.
+const BRUMIX_COORDS = "-26.788110032666733,-48.67476147096656";
+const BRUMIX_MAP_EMBED_SRC =
+  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8182.079667445721!2d-48.67476147096656!3d-26.788110032666733!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8d3f86e3bb7db%3A0xe838ac021b8f495e!2sBrumix%20Concreto%20Usinado!5e0!3m2!1spt-BR!2sus!4v1788228139445!5m2!1spt-BR!2sus";
 
 function MapPinIcon() {
   return (
@@ -1350,7 +1353,6 @@ function MapPinIcon() {
 }
 
 function Frame79() {
-  const label = encodeURIComponent("Brumix Concreto Usinado");
   return (
     <div className="bg-[#1d2227] overflow-clip relative rounded-[12px] shrink-0 w-full sm:w-[320px]" data-name="Mapa Brumix">
       <div className="bg-[#d91b29] content-stretch flex gap-[8px] items-center px-[14px] py-[10px] relative shrink-0 text-white">
@@ -1359,10 +1361,10 @@ function Frame79() {
       </div>
       <iframe
         title="Mapa da Brumix Concreto em Penha, SC"
-        src={`https://www.google.com/maps?q=${BRUMIX_COORDS}(${label})&z=17&output=embed`}
+        src={BRUMIX_MAP_EMBED_SRC}
         className="block border-0 h-[220px] w-full"
         loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
+        referrerPolicy="strict-origin-when-cross-origin"
       />
       <a
         href={`https://www.google.com/maps/dir/?api=1&destination=${BRUMIX_COORDS}`}
